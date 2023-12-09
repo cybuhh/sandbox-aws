@@ -1,0 +1,26 @@
+{
+  "name": "sandbox-aws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "node --env-file .env-sqs index",
+    "sqs-send": "node -r ts-node/register --env-file=.env-sqs src/sqs/msg-send",
+    "sqs-poll": "node -r ts-node/register --env-file=.env-sqs src/sqs/msg-poll",
+    "sqs-poll-own": "node -r ts-node/register --env-file=.env-sqs src/sqs/msg-poll-own",
+    "ts-watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.470.0",
+    "sqs-consumer": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
